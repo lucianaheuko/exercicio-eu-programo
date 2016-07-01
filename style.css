@@ -48,8 +48,9 @@ table {
 }
 
 body {
-  background-color: #DADADA;
+  background-color: #f3f3f3;
   font-family: 'Asap', sans-serif;
+  line-height: 1.5;
 }
 
 .post-container {
@@ -60,7 +61,7 @@ body {
 
 header {
   position: fixed;
-  top: 50px;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #0075B9;
@@ -68,20 +69,27 @@ header {
 }
 
 nav {
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-left: 10%;
 }
 
 a {
-  color: white;
+  color: #0c3145;
   text-decoration: none;
   padding: 1em;
+  transition: color ease 0.3s;
+  line-height: 1;
 }
 
-a:hover {
-  color: yellow;
-  background-color: blue;
+nav a:hover {
+  color: #bde6fd;
+}
+
+nav a.active {
+  color: #dcf2ff;
+}
+
+nav a:first-child {
+  padding-left: 0;
 }
 
 img {
@@ -92,17 +100,14 @@ img {
 }
 
 div {
-  margin: 0 auto;
-  width: 60%;
+  margin: 0 auto 20vh 10%;
+  width: 80%;
+  max-width: 800px;
 }
 
 h1 {
   font-size: 2.5em;
-  background-color: yellow;
   padding: 1em 0;
-  position: absolute;
-  top: 20px;
-  left: 200px;
 }
 
 h2 {
@@ -112,7 +117,7 @@ h2 {
 
 h3 {
   font-size: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 p {
