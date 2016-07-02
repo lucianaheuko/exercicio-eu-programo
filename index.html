@@ -9,13 +9,26 @@
   <body>
     <header>
       <nav>
-        <a href="mar-do-caribe.html">Caribe</a>
-        <a href="index.html" class="active">Ilhas Gregas</a>
+        <ul class="main">
+          <li>
+            <a href="mar-do-caribe.html">Caribe</a>
+          </li>
+          <li><a href="#">Bahamas</a></li>
+          <li>
+            <a href="index.html">Ilhas Gregas</a>
+            <ul class="submenu">
+              <li><a href="#">Praias</a></li>
+              <li><a href="#">Centro Historico</a></li>
+            </ul>
+          </li>
+        </ul>
+
       </nav>
     </header>
-    <section class='post-container'>
-      <img src="img/imagem.jpg" alt="descricao da imagem" >
-      <div>
+    <article>
+      <img src="img/imagem.jpg" class="full-width"
+       alt="descricao da imagem" >
+      <section class="content">
         <h1>Desbravando as ilhas gregas</h1>
         <h2>Da série <b>volta ao mundo em 365 dias</b></h2>
         <h3>Bruna da Silva <i>10 de maio de 2016</i></h3>
@@ -28,7 +41,10 @@
         <p>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
         </p>
-      </div>
-    </section>
+      </section>
+      <section class="ads">
+        <img src="img/imagem.jpg" alt="" />
+      </section>
+    </article>
   </body>
 </html>

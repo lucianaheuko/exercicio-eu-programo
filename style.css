@@ -53,12 +53,6 @@ body {
   line-height: 1.5;
 }
 
-.post-container {
-  width: 100%;
-  margin: 0 auto;
-  /*background-color: yellow;*/
-}
-
 header {
   position: fixed;
   top: 0;
@@ -66,10 +60,33 @@ header {
   right: 0;
   background-color: #0075B9;
   padding: 1em 0;
+	z-index: 1;
 }
 
 nav {
   padding-left: 10%;
+}
+
+.main li {
+	display: inline;
+	position: relative;
+}
+
+.submenu li {
+	display: block;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	background-color: rgba(0, 117, 185, 0.8);
+	padding: 1em;
+}
+
+.main li:hover ul {
+	display: block;
 }
 
 a {
@@ -93,10 +110,37 @@ nav a:first-child {
 }
 
 img {
-  width: 100%;
+	width: 100%;
   display: block;
-  visibility: show;
   margin: 0 auto;
+}
+
+img.full-width {
+	width: 100%;
+	display: block;
+  margin: 0;
+}
+
+article {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+section {
+	width: 40%;
+	padding: 5%;
+	position: absolute;
+}
+
+section.content {
+	top: 100%;
+	left: 0;
+}
+
+section.ads {
+	top: 100%;
+	left: 50%;
 }
 
 div {
