@@ -58,7 +58,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #0075B9;
+  background-color: rgba(24,115,160,0.8);
   padding: 1em 0;
 	z-index: 1;
 }
@@ -70,19 +70,27 @@ nav {
 .main li {
 	display: inline;
 	position: relative;
+	padding: 1em;
 }
 
-.submenu li {
-	display: block;
+.main li:first-child {
+	padding-left: 0;
 }
 
-.submenu {
+ul.submenu {
 	display: none;
+	width: 160px;
 	position: absolute;
-	top: 2em;
+	top: 3em;
 	left: 0;
 	background-color: rgba(0, 117, 185, 0.8);
 	padding: 1em;
+}
+
+ul.submenu li {
+	display: block;
+	padding: 0.5em 0;
+	cursor: pointer;
 }
 
 .main li:hover ul {
@@ -92,7 +100,6 @@ nav {
 a {
   color: #0c3145;
   text-decoration: none;
-  padding: 1em;
   transition: color ease 0.3s;
   line-height: 1;
 }
@@ -103,10 +110,6 @@ nav a:hover {
 
 nav a.active {
   color: #dcf2ff;
-}
-
-nav a:first-child {
-  padding-left: 0;
 }
 
 img {
@@ -121,37 +124,28 @@ img.full-width {
   margin: 0;
 }
 
-article {
-	position: relative;
-	top: 0;
-	left: 0;
+.article-content {
+	width: 80%;
+	margin: 50px auto;
 }
 
-section {
-	width: 40%;
-	padding: 5%;
-	position: absolute;
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
 }
 
-section.content {
-	top: 100%;
-	left: 0;
+section.main-content {
+	margin-right: 50px;
 }
 
-section.ads {
-	top: 100%;
-	left: 50%;
-}
-
-div {
-  margin: 0 auto 20vh 10%;
-  width: 80%;
-  max-width: 800px;
+section.secondary-content img {
+	margin-bottom: 20px;
 }
 
 h1 {
   font-size: 2.5em;
-  padding: 1em 0;
+  padding-bottom: 1em;
 }
 
 h2 {
@@ -174,4 +168,35 @@ b {
 
 i {
   font-style: italic;
+}
+
+.form {
+	margin: 50px 0;
+}
+
+.form div {
+	margin-bottom: 20px;
+}
+
+input[type=text], input[type=email], textarea{
+    padding: 0.5em 1em;
+		width: 150px;
+    border: 1px solid #222222; /* dark gray */
+    line-height: 3;
+}
+
+input[type=submit] {
+    padding: 0.5em 1em;
+    border: 1px solid #6a0bc1; /* purple */
+    color: #6a0bc1; /* purple */
+    background-color: transparent;
+    line-height: 3;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: color ease 0.3s, background-color ease 0.3s;
+}
+
+input[type=submit]:hover {
+    color: #ffffff; /* white */
+    background-color: #6a0bc1; /* purple */
 }
